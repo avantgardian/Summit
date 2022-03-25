@@ -15,10 +15,9 @@ def Execute(data):
     username = data.UserName
 
     if is_pyramid():
-        send_message("Yes, you are a pyramid" + username + "!!!")
+        send_message("Yes, you are a pyramid " + username + "!!!")
     else:
         send_message("Oops " + username + ", seems you are not a pyramid")
-
     return
 
 
