@@ -34,3 +34,8 @@ def is_pyramid():
 def send_message(message):
     Parent.SendStreamMessage(message)
     return
+
+
+def log_message(message):
+    Parent.log("!pyramid", message)
+    return
