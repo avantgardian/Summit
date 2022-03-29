@@ -3,13 +3,14 @@ Website = "https://"
 Description = "Minigame about climbing the stairs"
 Creator = "Avantgardian"
 Version = "0.1"
+Command = "!pyramid"
 
 def Init():
     return
 
 
 def Execute(data):
-    if data.GetParam(0) != "!pyramid":
+    if data.GetParam(0) != Command:
         return
     
     username = data.UserName
@@ -37,5 +38,5 @@ def send_message(message):
 
 
 def log_message(message):
-    Parent.log("!pyramid", message)
+    Parent.log(Command, message)
     return
