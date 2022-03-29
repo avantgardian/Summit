@@ -10,6 +10,7 @@ def Init():
 
 
 def Execute(data):
+    log("Entering execution")
     if data.GetParam(0) != Command:
         return
     
@@ -19,6 +20,7 @@ def Execute(data):
         send_message("Yes, you are a pyramid " + username + "!!!")
     else:
         send_message("Oops " + username + ", seems you are not a pyramid")
+    log("Exiting execution")
     return
 
 
@@ -37,6 +39,6 @@ def send_message(message):
     return
 
 
-def log_message(message):
+def log(message):
     Parent.log(Command, message)
     return
